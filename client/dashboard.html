@@ -1,3 +1,10 @@
 <template name='dashboard'>
    hello world
+   {{#if currentUser}}
+   	{{currentUser.username}}
+   	<a href="" id="logout">Log Out</a>
+   {{else}}
+   	<a href="/login">Log in</a>
+   	<a href="/register">Sign up</a>
+   {{/if}}
 </template>
