@@ -6,3 +6,14 @@ Template.registerHelper("usernameFromId", function (userId){
 		return user.username;
 	}
 });
+
+Template.registerHelper("isUsersPost", function(userId, post){
+  console.log("User: " + userId);
+  console.log("Post: " + post.title);
+  var user = Meteor.users.findOne({_id: userId});
+  var post = Meteor.posts.findOne({title: post.title});
+
+  if(post.user === user.id){
+    return '<a href="" class="remove-post"><i class="glyphicon glyphicon-remove" id="remove-post"></i></a>'.raw
+  }
+})

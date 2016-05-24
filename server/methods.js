@@ -3,7 +3,7 @@ Meteor.methods ({
  		check(userId, String);
  		check(inputTitle, String);
  		check(inputVal, String);
-    
+
     Posts.insert({
     	title: inputTitle,
 		 	description: inputVal,
@@ -12,7 +12,12 @@ Meteor.methods ({
 		});
   },
   'removePost': function(obj){
-  	console.log(obj);
-  	Posts.remove({obj})
+  	if(obj.user === Meteor.userId()){
+      console.log("This post belongs to you");
+      Posts.remove({title: obj.title})
+    } else {
+      return alert("This post does not belong to you");
+    }
+
   }
 })
