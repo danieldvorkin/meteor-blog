@@ -6,3 +6,9 @@
 .login-well input, .register-well input {
 	margin-bottom:10px !important;
 }
+#remove-post {
+	float:right;
+	margin-top:-15px;
+	cursor:pointer;
+}
+

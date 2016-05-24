@@ -7,7 +7,6 @@ Template.login.events({
 				alert(error);
 			} else {
 				FlowRouter.go('/')
-				FlashMessages.sendSuccess("Message");
 			}
 		});
 	}

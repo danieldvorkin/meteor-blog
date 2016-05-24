@@ -1,0 +1,14 @@
+<template name="post">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+	    <h3 class="panel-title">{{title}}</h3>
+	    <a href=""><i class="glyphicon glyphicon-remove" id="remove-post"></i></a>
+	  </div>
+	  <div class="panel-body">
+	  	{{description}}
+	  </div>
+	  <div class="panel-footer">
+	  	<p>Author: {{usernameFromId user}}</p>
+	  </div>
+	</div>
+</template>
