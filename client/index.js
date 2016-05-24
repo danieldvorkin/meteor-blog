@@ -1,4 +1,4 @@
-Template.dashboard.events({
+Template.index.events({
 	'click #logout': function(e){
 		e.preventDefault();
 
