@@ -11,8 +11,8 @@ Meteor.methods ({
 		 	timestamp: new Date()
 		});
   },
-  'removePost': function(id){
-  	console.log(id);
-  	Posts.remove({_id: id})
+  'removePost': function(obj){
+  	console.log(obj);
+  	Posts.remove({obj})
   }
 })
