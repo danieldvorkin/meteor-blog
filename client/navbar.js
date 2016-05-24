@@ -1,4 +1,4 @@
-Template.index.events({
+Template.navbar.events({
 	'click #logout': function(e){
 		e.preventDefault();
 

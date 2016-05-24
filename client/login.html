@@ -1,13 +1,11 @@
 <template name="login">
-	<a href="/">Back</a>
-	<p>Login</p>
-	<form id="loginForm">
-		<label for="email">Email: </label>
-		<input type="textbox" id="email"/>
-
-		<label for="password">Password: </label>
-		<input type="password" id="password"/>
-
-		<button type="submit">Login</button>
-	</form>
+	{{> navbar}}
+	<div class="well login-well">
+		<h1>Login</h1>
+		<form id="loginForm" class="input-group">
+			<input type="textbox" id="email" class="form-control" placeholder="Email" />
+			<input type="password" id="password" class="form-control" placeholder="Password" />
+			<button type="submit" class="form-control">Login</button>
+		</form>
+	</div>
 </template>

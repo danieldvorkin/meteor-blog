@@ -1,0 +1,8 @@
+.login-well, .register-well {
+	margin-left:35%;
+	margin-right:35%;	
+}
+
+.login-well input, .register-well input {
+	margin-bottom:10px !important;
+}

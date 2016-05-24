@@ -1,4 +1,4 @@
-Template.registerLayout.events({
+Template.register.events({
 	'submit #registerForm': function(e){
 		e.preventDefault();
 		var userData = {
