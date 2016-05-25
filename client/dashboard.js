@@ -11,6 +11,6 @@ Template.dashboard.helpers({
 		return Posts.find({}, {sort: {timestamp: '-1'}});
 	},
   users: function(){
-    return Users.find({})
+    return Meteor.users.find({})
   }
 });

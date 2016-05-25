@@ -4,5 +4,5 @@ Meteor.publish('posts', function(){
 })
 
 Meteor.publish('users', function(){
-  return Users.find({});
+  return Meteor.users.find({});
 })
