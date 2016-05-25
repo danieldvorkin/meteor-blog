@@ -1,6 +1,6 @@
 Template.registerHelper("usernameFromId", function (userId){
-	var user = Meteor.users.find({_id: userId});
-	console.log(user);
+	var user = Meteor.users.findOne(userId);
+
 	if(typeof user === "undefined"){
 		return "";
 	}
