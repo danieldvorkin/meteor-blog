@@ -11,13 +11,7 @@ Meteor.methods ({
 		 	timestamp: new Date()
 		});
   },
-  'removePost': function(obj){
-  	if(obj.user === Meteor.userId()){
-      console.log("This post belongs to you");
-      Posts.remove({title: obj.title})
-    } else {
-      return alert("This post does not belong to you");
-    }
-
+  'removePost': function(postId){
+  	Posts.remove({_id: postId})
   }
 })

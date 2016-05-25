@@ -1,12 +1,15 @@
 Template.post.events({
-	'click .remove-post': function(e){
+	'click .delete': function(e){
 		e.preventDefault();
-		Meteor.call('removePost', this, function(error){
-			if(error){
-				console.log("Removal of blog post: Failed: " + error);
-			} else {
-				console.log("Removal of blog post: Successful")
-			}
-		});
+		var post = Posts.findOne({title: this.title});
+		if(post.user === Meteor.userId()){
+			Meteor.call('removePost', post._id, function(error){
+				if(error){
+					console.log(error);
+				} else {
+					console.log("Awesome, deleted!!!");
+				}
+			});	
+		}
 	}
-})
+});

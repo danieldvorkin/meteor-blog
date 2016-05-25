@@ -2,7 +2,9 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 	    <h3 class="panel-title">{{title}}</h3>
-	    {{isUsersPost user this}}
+	    {{#if showDelete this currentUser}}
+	    	<a href="#" class="delete"><i class="glyphicon glyphicon-remove"></i></a>
+	    {{/if}}
 	  </div>
 	  <div class="panel-body">
 	  	{{description}}

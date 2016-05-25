@@ -9,13 +9,13 @@
 				<button class="form-control" type="submit">Post</button>
 			</form>
 		{{else}}
-			<p>Sign in to blog a post.</p>
+			<p><a href="/login">Sign in</a> to post a story....</p>
 		{{/if}}
 	</div>
 	<div class="blog-posts-area">
 		<ul class="blog-posts">
 			{{#each posts}}
-				{{> post title=title description=description user=user }}
+				{{> post id=id title=title description=description user=user }}
 			{{/each}}
 		</ul>
 	</div>
