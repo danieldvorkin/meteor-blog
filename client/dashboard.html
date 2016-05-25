@@ -2,15 +2,6 @@
 	{{> navbar}}
 	<div class="blog-entry">
 		<h2>Welcome to Quick<strong>Blog</strong></h2>
-		{{#if currentUser}}
-			<form id="blogPost" class="input-group">
-				<input class="form-control" id="blog-title" placeholder="Blog Title"/>
-				<textarea class="form-control" id="blog-value" placeholder="Blog away fellow blogger...." cols="40" rows="5"></textarea>
-				<button class="form-control" type="submit">Post</button>
-			</form>
-		{{else}}
-			<p><a href="/login">Sign in</a> to post a story....</p>
-		{{/if}}
 	</div>
 	<div class="blog-posts-area">
 		<ul class="blog-posts">

@@ -14,6 +14,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/">Home</a></li>
           {{#if currentUser}}
+            <li><a href="#" class="blog" data-toggle="modal" data-target="#myModal">Blog</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -29,4 +30,19 @@
       </div>
     </div>
   </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form id="blogPost" class="input-group">
+            <input class="form-control" id="blog-title" placeholder="Blog Title"/>
+            <textarea class="form-control" id="blog-value" placeholder="Blog away fellow blogger...." cols="40" rows="5"></textarea>
+            <button class="form-control" type="submit">Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

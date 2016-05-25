@@ -7,7 +7,7 @@ Template.dashboard.onCreated(function(){
 
 Template.dashboard.helpers({
 	posts: function(){
-		return Posts.find({});
+		return Posts.find({}, {sort: {timestamp: '-1'}});
 	}
 });
 
