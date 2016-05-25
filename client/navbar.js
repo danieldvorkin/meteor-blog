@@ -14,9 +14,9 @@ Template.navbar.events({
 		e.preventDefault();
 		var inputVal = $('#blog-value').val();
 		var inputTitle = $('#blog-title').val();
-		var user = Meteor.userId();
+		var userId = Meteor.userId();
 
-		Meteor.call('createPost', inputTitle, inputVal, user, function(error){
+		Meteor.call('createPost', inputTitle, inputVal, userId, function(error){
 			if(error){
 				alert("There was an error: " + error);
 			} else {
