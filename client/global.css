@@ -8,10 +8,13 @@
 	.login-well input, .register-well input {
 		margin-bottom:10px !important;
 	}
-	.delete {
+	.delete, .update {
 		float:right;
 		margin-top:-15px;
 		cursor:pointer;
+	}
+	.update {
+		margin-right:5px;
 	}
 
 	.blog-entry {
@@ -35,10 +38,13 @@
 	.login-well input, .register-well input {
 		margin-bottom:10px !important;
 	}
-	.delete {
+	.delete, .update {
 		float:right;
 		margin-top:-15px;
 		cursor:pointer;
+	}
+	.update {
+		margin-right:5px;
 	}
 
 	.blog-entry {

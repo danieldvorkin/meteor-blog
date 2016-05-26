@@ -13,5 +13,12 @@ Meteor.methods ({
   },
   'removePost': function(postId){
   	Posts.remove({_id: postId})
+  },
+  'updatePost': function(postId, title, desc){
+    check(postId, String);
+    check(title, String);
+    check(desc, String);
+
+    Posts.update({_id: postId}, {$set: {title: title, description: desc}});
   }
 })
