@@ -1,0 +1,13 @@
+<template name="dashboard">
+	{{> navbar}}
+	<div class="blog-entry">
+		<h2>Welcome to Quick<strong>Blog</strong></h2>
+	</div>
+	<div class="blog-posts-area">
+		<ul class="blog-posts">
+			{{#each posts}}
+				{{> post id=id title=title description=description user=user }}
+			{{/each}}
+		</ul>
+	</div>
+</template>
