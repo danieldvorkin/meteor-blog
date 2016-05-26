@@ -14,8 +14,9 @@ Template.navbar.events({
 		e.preventDefault();
 		var inputVal = $('#blog-value').val();
 		var inputTitle = $('#blog-title').val();
+		var userId = Meteor.userId();
 
-		Meteor.call('createPost', inputTitle, inputVal, Meteor.userId(), function(error){
+		Meteor.call('createPost', inputTitle, inputVal, userId, function(error){
 			if(error){
 				alert("There was an error: " + error);
 			} else {
@@ -24,6 +25,7 @@ Template.navbar.events({
 				FlowRouter.go("/");
 			}
 		});
+
 		$('#myModal').modal('hide');
 	}
 });
