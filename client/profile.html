@@ -1,0 +1,13 @@
+<template name="profile">
+  {{> navbar}}
+
+  <h2 id="profile-name">{{ currentUser.username}}'s Profile</h2>
+
+  <div class="blog-posts-area">
+    <ul class="blog-posts">
+      {{#each posts}}
+        {{> post id=id title=title description=description user=user }}
+      {{/each}}
+    </ul>
+  </div>
+</template>

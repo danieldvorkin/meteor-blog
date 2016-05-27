@@ -22,17 +22,21 @@ Template.dashboard.events({
 		var inputVal = $('#newBlog-value').val();
 		var inputTitle = $('#newBlog-title').val();
 		var userId = Meteor.userId();
-
-		Meteor.call('createPost', inputTitle, inputVal, userId, function(error){
-			if(error){
-				alert("There was an error: " + error);
-			} else {
-				$('#blog-value').val("");
-				$('#blog-title').val("");
-				FlowRouter.go("/");
-			}
-		});
-		$('#newBlog-value').val("");
-		$('#newBlog-title').val("");
+		if(inputVal === "" || inputTitle === ""){
+			alert("Missing the title or post");
+			return false;
+		} else {
+			Meteor.call('createPost', inputTitle, inputVal, userId, function(error){
+				if(error){
+					alert("There was an error: " + error);
+				} else {
+					$('#blog-value').val("");
+					$('#blog-title').val("");
+					FlowRouter.go("/");
+				}
+			});
+			$('#newBlog-value').val("");
+			$('#newBlog-title').val("");
+		}
 	}
 });

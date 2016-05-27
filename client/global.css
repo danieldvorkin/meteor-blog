@@ -35,6 +35,11 @@
     margin-right: 30%;
     margin-bottom: 50px;
   }
+
+  #profile-name {
+    margin: 0 16em;
+    margin-bottom: 100px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -72,6 +77,11 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 10px;
+  }
+
+  #profile-name {
+    margin: 0 1.5em;
+    margin-bottom: 50px;
   }
 }
 
