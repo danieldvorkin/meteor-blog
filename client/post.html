@@ -4,7 +4,9 @@
 	    <h3 class="panel-title">{{title}}</h3>
 	    {{#if showDelete this currentUser}}
 	    	<a href="#" class="delete"><i class="glyphicon glyphicon-remove"></i></a>
-	    	<a href="#" class="update"><i class="glyphicon glyphicon-cog"></i></a>
+	    	<a href="#" class="update" data-toggle="modal" data-target="#myModal">
+	    		<i class="glyphicon glyphicon-cog"></i>
+	    	</a>
 	    {{/if}}
 	  </div>
 	  <div class="panel-body">
@@ -14,4 +16,5 @@
 	  	<p>Author: {{usernameFromId user}}</p>
 	  </div>
 	</div>
+	{{> modal title=title desc=description}}
 </template>

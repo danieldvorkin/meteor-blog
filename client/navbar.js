@@ -10,22 +10,4 @@ Template.navbar.events({
 			}
 		});
 	},
-	'submit #blogPost': function(e){
-		e.preventDefault();
-		var inputVal = $('#blog-value').val();
-		var inputTitle = $('#blog-title').val();
-		var userId = Meteor.userId();
-
-		Meteor.call('createPost', inputTitle, inputVal, userId, function(error){
-			if(error){
-				alert("There was an error: " + error);
-			} else {
-				$('#blog-value').val("");
-				$('#blog-title').val("");
-				FlowRouter.go("/");
-			}
-		});
-
-		$('#myModal').modal('hide');
-	}
 });

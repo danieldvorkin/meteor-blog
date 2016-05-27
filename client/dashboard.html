@@ -3,6 +3,11 @@
 	<div class="blog-entry">
 		<h2>Welcome to Quick<strong>Blog</strong></h2>
 	</div>
+	<form id="newPost" class="input-group">
+    <input class="form-control" id="newBlog-title" placeholder="Blog Title"/>
+    <textarea class="form-control" id="newBlog-value" placeholder="Blog away fellow blogger...." cols="40" rows="5"></textarea>
+    <button class="form-control" type="submit">Post</button>
+  </form>
 	<div class="blog-posts-area">
 		<ul class="blog-posts">
 			{{#each posts}}
