@@ -1,64 +1,80 @@
 /* tablet, landscape iPad, lo-res laptops ands desktops */
-@media (min-width:700px) { 
-	.login-well, .register-well {
-		margin-left:35%;
-		margin-right:35%;	
-	}
+@media (min-width: 700px) {
+  .login-well, .register-well {
+    margin-left: 35%;
+    margin-right: 35%;
+  }
 
-	.login-well input, .register-well input {
-		margin-bottom:10px !important;
-	}
-	.delete, .update {
-		float:right;
-		margin-top:-15px;
-		cursor:pointer;
-	}
-	.update {
-		margin-right:5px;
-	}
+  .login-well input, .register-well input {
+    margin-bottom: 10px !important;
+  }
 
-	.blog-entry {
-		margin-left:30%;
-		margin-right:30%;
-		margin-bottom:40px;
-	}
+  .delete, .update {
+    float: right;
+    margin-top: -15px;
+    cursor: pointer;
+  }
 
-	.blog-posts-area, #newPost {
-		margin-left:20%;
-		margin-right:20%;
-	}
+  .update {
+    margin-right: 5px;
+  }
+
+  .blog-entry {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 40px;
+  }
+
+  .blog-posts-area {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #newPost {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 50px;
+  }
 }
 
-@media (max-width:400px) { 
-	.login-well, .register-well {
-		margin-left:15%;
-		margin-right:15%;	
-	}
+@media (max-width: 400px) {
+  .login-well, .register-well {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 
-	.login-well input, .register-well input {
-		margin-bottom:10px !important;
-	}
-	.delete, .update {
-		float:right;
-		margin-top:-15px;
-		cursor:pointer;
-	}
-	.update {
-		margin-right:5px;
-	}
+  .login-well input, .register-well input {
+    margin-bottom: 10px !important;
+  }
 
-	.blog-entry {
-		margin-left:15%;
-		margin-right:15%;
-		margin-bottom:20px;
-	}
+  .delete, .update {
+    float: right;
+    margin-top: -15px;
+    cursor: pointer;
+  }
 
-	.blog-posts-area, #newPost {
-		margin-left:5%;
-		margin-right:15%;
-	}
+  .update {
+    margin-right: 5px;
+  }
+
+  .blog-entry {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 20px;
+  }
+
+  .blog-posts-area {
+    margin-left: 5%;
+    margin-right: 15%;
+  }
+
+  #newPost {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+  }
 }
 
 #blogPost input, #blogPost textarea {
-	margin-bottom:10px;
+  margin-bottom: 10px;
 }
